@@ -1,0 +1,16 @@
+language:
+  - python
+  - java
+
+python:
+  - "2.7"
+
+install:
+  - pip install sphinx
+
+script:
+  - mvn package
+  - mvn ant:ant
+  - mvn compile
+  - mvn jspc:jspc
+  # TODO: eventually add RST ?
